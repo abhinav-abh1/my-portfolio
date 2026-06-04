@@ -133,6 +133,13 @@ export const education = [
 
 export const certifications = [
   {
+  name: "Python Data Structures & Algorithms + LeetCode Exercises",
+  issuer: "Udemy",
+  instructor: "Scott Barrett",
+  year: "2026",
+  badge: "Certificate of Completion",
+},
+  {
     name: "JavaScript Algorithms and Data Structures Masterclass",
     issuer: "Udemy",
     year: "2026",
