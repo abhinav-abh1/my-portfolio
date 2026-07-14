@@ -1,126 +1,109 @@
 "use client";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowRight, Satellite } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, MessageSquare } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
 
 export default function Contact() {
   const contacts = [
     {
-      icon: <Mail size={24} />,
-      label: "Comms Channel",
+      icon: <Mail size={20} />,
+      label: "Email",
       value: personalInfo.email,
-      href: `mailto:${personalInfo.email}`,
-      color: "var(--color-accent-cyan)"
+      href: `mailto:${personalInfo.email}`
     },
     {
-      icon: <Phone size={24} />,
-      label: "Direct Link",
+      icon: <Phone size={20} />,
+      label: "Phone",
       value: personalInfo.phone,
-      href: `tel:${personalInfo.phone}`,
-      color: "var(--color-accent-violet)"
+      href: `tel:${personalInfo.phone}`
     },
     {
-      icon: <MapPin size={24} />,
-      label: "Coordinates",
+      icon: <MapPin size={20} />,
+      label: "Location",
       value: personalInfo.location,
-      href: "#",
-      color: "var(--color-accent-green)"
+      href: "#"
     },
   ];
 
   return (
     <section id="contact" className="py-24 bg-transparent relative overflow-hidden z-10">
-      {/* Background denser nebula */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(0,245,255,0.05),transparent_50%)] pointer-events-none" />
-
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Message */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-3 mb-4">
-              <Satellite className="text-accent-cyan animate-pulse" size={24} />
-              <p className="uppercase tracking-[0.3em] text-sm font-sub text-accent-cyan glow-text">ESTABLISH CONNECTION</p>
+            <div className="flex items-center gap-2 mb-4">
+              <MessageSquare className="text-blue-500" size={24} />
+              <p className="uppercase tracking-widest text-sm text-blue-500 font-medium">Get in Touch</p>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-display font-bold tracking-widest leading-tight text-text-primary mb-8 uppercase">
-              Transmit Data<br />Packets
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Let's build something together.
             </h2>
-            <p className="text-lg text-text-secondary font-light max-w-lg mb-8 font-sub tracking-wider">
-              System is online and ready to receive transmissions. Open for collaborations, mission briefs, and data exchanges.
+            <p className="text-lg text-gray-400 max-w-lg mb-8 leading-relaxed">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. 
+              Feel free to reach out through any of the channels.
             </p>
 
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href={personalInfo.github}
                 target="_blank"
-                className="group flex items-center gap-3 px-8 py-4 bg-void border border-accent-cyan/30 hover:border-accent-cyan text-text-primary transition-all hover:bg-accent-cyan/10 hover:shadow-[0_0_15px_rgba(0,245,255,0.3)] hud-corners uppercase tracking-widest font-sub text-xs"
+                className="group flex items-center gap-2 px-6 py-3 bg-[#18181b] border border-white/10 rounded-lg text-white transition-colors hover:border-blue-500/50 hover:bg-blue-500/5 font-medium"
               >
-                GitHub Uplink
-                <ArrowRight className="text-accent-cyan group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" size={16} />
+                GitHub Profile
+                <ArrowRight className="text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all" size={18} />
               </a>
               <a
                 href={personalInfo.linkedin}
                 target="_blank"
-                className="group flex items-center gap-3 px-8 py-4 bg-void border border-accent-violet/30 hover:border-accent-violet text-text-primary transition-all hover:bg-accent-violet/10 hover:shadow-[0_0_15px_rgba(123,47,255,0.3)] hud-corners uppercase tracking-widest font-sub text-xs"
+                className="group flex items-center gap-2 px-6 py-3 bg-[#18181b] border border-white/10 rounded-lg text-white transition-colors hover:border-blue-500/50 hover:bg-blue-500/5 font-medium"
               >
-                LinkedIn Uplink
-                <ArrowRight className="text-accent-violet group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" size={16} />
+                LinkedIn Profile
+                <ArrowRight className="text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all" size={18} />
               </a>
             </div>
           </motion.div>
 
           {/* Right Side - Contact Cards */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="space-y-6"
+            transition={{ delay: 0.1 }}
+            className="space-y-4"
           >
             {contacts.map((contact, i) => (
-              <motion.a
+              <a
                 key={i}
                 href={contact.href}
                 target={contact.href.startsWith('http') ? '_blank' : undefined}
-                className="glass-panel group p-6 flex items-center gap-6 hud-corners transition-all duration-300 relative overflow-hidden"
-                style={{ borderColor: 'rgba(255,255,255,0.05)' }}
-                whileHover={{ scale: 1.02, borderColor: contact.color }}
+                className="block group"
               >
-                {/* Scan effect on hover */}
-                <div className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:animate-[scan_1s_ease-in-out_infinite]" />
-
-                <div
-                  className="w-14 h-14 flex items-center justify-center flex-shrink-0 transition-colors border bg-void"
-                  style={{ borderColor: `${contact.color}50`, color: contact.color, boxShadow: `0 0 10px ${contact.color}20` }}
-                >
-                  {contact.icon}
+                <div className="bg-[#18181b] border border-white/5 rounded-xl p-6 flex items-center gap-6 hover:border-blue-500/30 transition-colors">
+                  <div className="w-12 h-12 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0">
+                    {contact.icon}
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-gray-500 mb-1">{contact.label}</p>
+                    <p className="text-white font-medium group-hover:text-blue-400 transition-colors">
+                      {contact.value}
+                    </p>
+                  </div>
                 </div>
-
-                <div className="flex-1 z-10">
-                  <p className="text-[10px] font-sub uppercase tracking-[0.2em] text-text-muted mb-1">{contact.label}</p>
-                  <p className="text-text-primary text-sm font-sub tracking-wider transition-colors" style={{ textShadow: `0 0 10px ${contact.color}40` }}>
-                    {contact.value}
-                  </p>
-                </div>
-
-                <ArrowRight className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all z-10" style={{ color: contact.color }} />
-              </motion.a>
+              </a>
             ))}
           </motion.div>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="mt-24 border-t border-accent-cyan/20 pt-12 text-center relative z-10">
-        <div className="flex justify-center mb-4">
-          <div className="w-1 h-1 bg-accent-cyan rounded-full animate-ping shadow-[0_0_10px_#00f5ff]" />
-        </div>
-        <p className="text-text-muted font-sub tracking-widest text-xs uppercase">
-          System Core Online • {new Date().getFullYear()} • Abhinav A
+      <div className="mt-24 border-t border-white/5 pt-10 text-center text-sm text-gray-500 max-w-6xl mx-auto px-6">
+        <p>
+          &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
         </p>
       </div>
     </section>
