@@ -1,6 +1,6 @@
 "use client";
 import { useState, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { projects } from "@/data/portfolio";
 import { ExternalLink, Database, ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -38,7 +38,7 @@ export default function Projects() {
 
   const visible = projects.slice(index, index + VISIBLE);
 
-  const variants = {
+  const variants: Variants = {
     enter: (d: number) => ({ x: d > 0 ? 30 : -30, opacity: 0 }),
     center: {
       x: 0,
