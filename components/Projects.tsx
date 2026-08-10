@@ -174,32 +174,32 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="border-t border-white/5 p-4 bg-black/20 flex justify-between">
-                     <a
-                        href={project.github}
-                        target="_blank"
-                        className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors"
-                      >
-                        <ExternalLink size={14} />
-                        Source Code
-                      </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors"
+                    >
+                      <ExternalLink size={14} />
+                      Source Code
+                    </a>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
           </AnimatePresence>
         </div>
-        
+
         {/* Indicators */}
         <div className="mt-8 flex justify-center gap-2">
-            {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-              <button
-                key={i}
-                onClick={() => goTo(i)}
-                className={`h-1.5 rounded-full transition-all ${i === index ? 'w-8 bg-blue-500' : 'w-2 bg-gray-700 hover:bg-gray-500'}`}
-              />
-            ))}
+          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i)}
+              className={`h-1.5 rounded-full transition-all ${i === index ? 'w-8 bg-blue-500' : 'w-2 bg-gray-700 hover:bg-gray-500'}`}
+            />
+          ))}
         </div>
 
       </div>

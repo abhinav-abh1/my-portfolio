@@ -79,7 +79,7 @@ export default function Experience() {
 
               <div className="space-y-6">
                 {education.map((edu, i) => {
-                  const percentage = i === 0 ? 85 : 76;
+                  const percentage = edu.score;
                   return (
                     <motion.div
                       key={i}
@@ -122,9 +122,9 @@ export default function Experience() {
                           {edu.degree}
                         </h4>
                         <p className="text-blue-400 font-medium text-sm">{edu.institution}</p>
-                        <p className="text-gray-500 text-xs mt-2">{edu.location} • {edu.period}</p>
+                        <p className="text-gray-500 text-xs mt-2">{edu.period}</p>
 
-                        {i === 0 && (
+                        {edu.status === "Currently Pursuing" && (
                           <div className="mt-4 inline-block bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-md font-medium">
                             Currently Enrolled
                           </div>

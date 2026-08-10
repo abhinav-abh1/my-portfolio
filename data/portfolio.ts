@@ -219,15 +219,15 @@ export const experience = [
 export const education = [
   {
     degree: "Master of Computer Applications (MCA)",
-    institution: "College of Engineering Thalassery",
-    location: "Kannur",
-    period: "2024 — Present",
-    score: 85,
-    status: "Currently Pursuing",
+    institution: "Cochin University of Science and Technology",
+    location: "Kochi",
+    period: "2024 — 2026",
+    score: 82,
+    status: "Completed",
   },
   {
     degree: "Bachelor of Computer Applications (BCA)",
-    institution: "SNG College of Advanced Studies",
+    institution: "Kannur University",
     location: "Kannur",
     period: "2021 — 2024",
     score: 76,
