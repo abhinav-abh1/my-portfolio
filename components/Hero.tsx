@@ -23,7 +23,7 @@ export default function Hero() {
             >
               Hi, I'm <span className="whitespace-nowrap">{personalInfo.name}</span>
             </motion.h1>
-            
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Hero() {
             >
               {personalInfo.subtitle}
             </motion.p>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -68,7 +68,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Resume.pdf"
+              href="/Abhinav_A.pdf"
               download
               className="flex items-center gap-2 bg-white/5 border border-white/10 text-white font-medium px-6 py-3 rounded-lg transition-colors hover:bg-white/10"
             >

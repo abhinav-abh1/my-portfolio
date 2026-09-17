@@ -30,7 +30,7 @@ export default function Experience() {
             <div className="flex items-center gap-3 mb-8">
               <h3 className="text-2xl font-bold text-white">Work Experience</h3>
             </div>
-            
+
             <div className="relative border-l border-white/10 pl-8 space-y-12 ml-4">
               {experience.map((exp, i) => (
                 <motion.div
@@ -142,7 +142,7 @@ export default function Experience() {
                 <Award className="text-blue-500" size={24} />
                 <h3 className="text-2xl font-bold text-white">Certifications</h3>
               </div>
-              
+
               <div className="space-y-4">
                 {certifications.map((cert, i) => (
                   <motion.div

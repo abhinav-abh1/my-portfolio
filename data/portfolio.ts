@@ -15,6 +15,7 @@ export const personalInfo = {
 export const skills = {
   "Programming Languages": [
     "Python",
+    "SQL",
     "JavaScript",
     "TypeScript",
     "C",
@@ -22,55 +23,93 @@ export const skills = {
     "Java",
   ],
 
-  "Machine Learning & AI": [
+  "Machine Learning": [
     "Scikit-learn",
-    "TensorFlow",
-    "Keras",
-    "XGBoost",
-    "Random Forest",
-    "Neural Networks",
-    "Feature Engineering",
-    "Model Evaluation",
-    "Cross Validation",
     "Supervised Learning",
     "Unsupervised Learning",
-    "Reinforcement Learning",
+    "Regression",
+    "Classification",
+    "Clustering",
+    "Predictive Modeling",
+    "Feature Engineering",
+    "Model Training",
+    "Model Evaluation",
+    "Cross-Validation",
+    "Hyperparameter Tuning",
+    "Ensemble Learning",
+  ],
+
+  "ML Algorithms": [
+    "Linear Regression",
+    "Logistic Regression",
+    "Decision Trees",
+    "Random Forest",
+    "XGBoost",
+    "K-Means Clustering",
+  ],
+
+  "Deep Learning": [
+    "TensorFlow",
+    "Keras",
+    "Artificial Neural Networks",
+    "Deep Neural Networks",
+    "CNNs",
+    "Transfer Learning",
+  ],
+
+  "Computer Vision": [
+    "YOLO",
+    "Object Detection",
+    "Semantic Segmentation",
+    "U-Net",
+    "Face Recognition",
+    "Siamese Networks",
+    "Triplet Loss",
   ],
 
   "Data Science": [
     "NumPy",
     "Pandas",
     "Matplotlib",
+    "Exploratory Data Analysis",
+    "Data Cleaning",
     "Data Preprocessing",
     "Data Visualization",
+    "Feature Scaling",
+  ],
+
+  "ML Engineering & Deployment": [
+    "FastAPI",
+    "REST APIs",
+    "Model Inference",
+    "Model Deployment",
+    "Docker",
+    "Federated Learning",
+    "Model Aggregation",
   ],
 
   "Backend Development": [
-    "FastAPI",
     "Flask",
     "Django",
     "Node.js",
     "Express.js",
-    "REST APIs",
     "JWT Authentication",
   ],
 
   "Frontend Development": [
     "React.js",
-    "TypeScript",
-    "Tailwind CSS",
     "Next.js",
-    "JavaScript",
     "HTML5",
     "CSS3",
+    "Tailwind CSS",
     "EJS",
   ],
 
   Databases: [
     "PostgreSQL",
-    "Supabase",
     "MySQL",
     "MongoDB",
+    "Supabase",
     "Prisma ORM",
   ],
 
@@ -78,20 +117,24 @@ export const skills = {
     "Git",
     "GitHub",
     "Postman",
-    "VS Code",
     "Jupyter Notebook",
+    "Google Colab",
+    "VS Code",
+    "Linux",
     "WhatsApp Cloud API",
+    "Razorpay",
     "AI APIs",
   ],
 
-  "System Design": [
+  "Software Engineering": [
     "Software Development Life Cycle",
     "Agile Methodology",
+    "System Design",
+    "API Integration",
     "Business Requirement Document (BRD)",
     "Software Requirement Specification (SRS)",
-    "ER Diagram",
+    "ER Diagrams",
     "UML Diagrams",
-    "API Integration",
   ],
 };
 
@@ -240,8 +283,17 @@ export const certifications = [
     name: "Machine Learning Specialization",
     issuer: "DeepLearning.AI & Stanford University",
     instructor: "Andrew Ng",
+    platform: "Coursera",
     year: "2026",
-    badge: "Coursera Specialization",
+    badge: "Specialization",
+  },
+
+  {
+    name: "Deep Learning Specialization",
+    issuer: "DeepLearning.AI",
+    platform: "Coursera",
+    year: "2026",
+    badge: "Specialization",
   },
 
   {
