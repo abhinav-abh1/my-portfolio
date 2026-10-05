@@ -248,13 +248,23 @@ export const projects = [
 
 export const experience = [
   {
+    role: "AI, ML & Data Science Trainer",
+    company: "Inker Robotic Solutions Pvt. Ltd. (Inker Skill Fest Program)",
+    period: "May 2026",
+    points: [
+      "Delivered hands-on training in Artificial Intelligence, Machine Learning, Data Science & Analytics, and Python with its libraries, using practical projects.",
+      "Received a written appreciation from the CEO for in-depth sessions and a practical teaching approach that contributed to the program's successful delivery.",
+    ],
+  },
+  {
     role: "Full Stack Developer Intern",
-    company: "Inker Robotics Pvt. Ltd.",
+    company: "Inker Robotic Solutions Pvt. Ltd. (Inker Intelligence division)",
     period: "Feb 2026 – May 2026",
     points: [
-      "Designed and developed a production-ready multi-tenant SaaS platform using React, TypeScript, Node.js, Supabase, and Prisma ORM.",
-      "Built scalable REST APIs, secure authentication, database architecture, and integrated WhatsApp Cloud API for real-time business workflows.",
-      "Collaborated in Agile development, contributing to system design, technical documentation (BRD/SRS), testing, and deployment.",
+      "Designed and built a multi-tenant WhatsApp-based ticket booking and show management SaaS platform end to end, using React, TypeScript, Node.js, Supabase, and Prisma ORM.",
+      "Built REST APIs, secure authentication, and database architecture, and implemented WhatsApp workflows, QR ticket generation, payment integration, and ticket validation.",
+      "Produced requirements and system documentation (BRD/SRS) and handled testing and deployment.",
+      "Independently designed a 10-day Full Stack Development course for internship trainees and conducted a 5-day AI and Machine Learning training program.",
     ],
   },
 ];
