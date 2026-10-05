@@ -295,6 +295,13 @@ export const certifications = [
     year: "2026",
     badge: "Specialization",
   },
+  {
+    name: "Machine Learning in Production",
+    issuer: "DeepLearning.AI",
+    platform: "DeepLearning.AI",
+    year: "2026",
+    badge: "Course Certificate",
+  },
 
   {
     name: "Python Data Structures & Algorithms + LeetCode Exercises",
